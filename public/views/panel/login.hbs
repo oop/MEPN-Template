@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{> header}}
+    <style>
+        .login-area {
+            width: 300px;
+            margin: 145px auto auto auto;
+            text-align: center;
+        }
+        #login-btn {
+            font-size:22px;
+        }
+    </style>
+</head>
+<body>
+    <form action="/auth" method="post" class="login-area">
+        <h2>Back-office</h2>
+        <h3>Log in.</h3>
+        <div>
+            <label>Username:&nbsp;</label>
+            <input type="text" name="username"/>
+        </div><br>
+        <div>
+            <label>Password:&nbsp;</label>
+            <input type="password" name="password"/>
+        </div><br>
+        <hr>
+        <div>
+            <input type="submit" id="login-btn" value="Log In"/><br><br>
+            <a href="/">Home</a>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MEPN Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <script src="/assets/common/js/socket.io.js"></script>
+    <script src="/assets/common/js/jquery-3.2.1.min.js"></script>
+    <script src="/assets/common/js/handlebars.js"></script>
+    <script src="/assets/common/js/handlebars.runtime.js"></script>
+    <script src="/assets/common/js/fa.js"></script>
+    <script src="/assets/site/js/main.js"></script>
+
+    <link rel="stylesheet" href="/assets/common/css/grid.css">
+    <link type="text/css" rel="stylesheet" href="/assets/site/css/style.css"/>
+</head>
+<body>
+{{{translate 'label' lang}}}
+<br><br>
+<a href="/panel">login to panel</a>
+<br><br>
+<button onclick="languageTest()">Language from JS</button>
+<br><br>
+
+{{#select lang}}
+    <select id="language">
+        <option value="en">en</option>
+        <option value="ru">ru</option>
+        <option value="tr">tr</option>
+        <option value="ar">ar</option>
+        <option value="gr">gr</option>
+    </select>
+{{/select}}
+
+<button onclick="languageChange()">Change</button>
+<br><br>
+<img src="{{assetImg 'logo' 'svg' 'site'}}">
+</body>
+<script>
+    window.translation = JSON.parse('{{{getTranslations lang}}}');
+</script>
+</html>

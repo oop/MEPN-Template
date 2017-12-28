@@ -1,0 +1,13 @@
+{
+  "port": 80,
+  "portSSL": 443,
+  "portDev": 5000,
+  "SSL": {
+    "fullchain": "./sslcert/fullchain.pem",
+    "privkey": "./sslcert/privkey.pem"
+  },
+  "mongodbURL": "mongodb://localhost:27017/siteDB",
+  "localhost": "{{production_domain_name}}",
+  "localhostDev": "localhost",
+  "expressSecret": "mepn_express_secret"
+}
