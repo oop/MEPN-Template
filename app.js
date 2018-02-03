@@ -8,8 +8,8 @@ let http = require('http'),
     mongodb = require('mongodb'),
     mongClient = mongodb.MongoClient,
 
-    Express = require('./components/express'),
-    Socket = require('./components/socket');
+    Express = require('./core/backend/express'),
+    Socket = require('./core/backend/socket');
 
 let isDev = process.argv[2],
     localhostAddress = '';

@@ -1,3 +1,10 @@
+/**
+ * @class
+ * @name Express
+ * @summary Express core.
+ * @version 1.0.0
+ */
+
 let helmet = require('helmet'),
     cors = require('cors'),
     bodyParser = require('body-parser'),
@@ -8,18 +15,23 @@ let helmet = require('helmet'),
     LocalStrategy = require('passport-local').Strategy,
     exphbs = require('express-handlebars'),
     routescan = require('express-routescan'),
-    session_mw = require('../middleware/session'),
+    session_mw = require('../../middleware/session'),
     filter = require('content-filter'),
-    user = require('../models/user');
+    user = require('../../models/user');
 
 class Express {
     constructor(that) {
         this.app = that.app;
         this.express = that.express;
         this.localhostAddr = that.localhostAddress;
-        this.base = __dirname.replace('components', '');
+        this.base = __dirname.replace('\\core\\backend', '');
     }
 
+    /**
+     * @public
+     * @function main
+     * @description Express core function
+     */
     main() {
         const hbs = exphbs.create({
             extname: 'hbs',
