@@ -4,8 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "grunt && nodemon app dev",
-    "test": "mongod --dbpath=D:/mongo_databases/siteDB"
+    "start": "grunt && nodemon app dev"
   },
   "license": "ISC",
   "dependencies": {
